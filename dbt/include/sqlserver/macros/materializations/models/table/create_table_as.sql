@@ -33,5 +33,5 @@ SQL Server doesnt support this, so we use the 'SELECT * INTO XYZ FROM ABC' synta
     {% endif %}
 
     {{ fabric__drop_relation_script(tmp_relation) }}
-
+    {% do run_query(fabric__drop_relation_script(relation)) %}
 {% endmacro %}
